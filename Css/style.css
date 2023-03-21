@@ -103,3 +103,14 @@
 
 
 /* End-Components */
+/* js */
+#Visitor_Info{
+  position: absolute;
+  top: 80%;
+  left: 2%;
+
+}
+#Visitor_Info li {
+  color: #54372B;
+}
+/* js */
