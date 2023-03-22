@@ -60,7 +60,6 @@
 //   console.log(nameDrink + " for Ms." + visitor);
 // }
 
-
 // let info = [visitor, gender, drink, nameDrink];
 // for(let i=0; i<info.length; i++){
 
@@ -108,48 +107,92 @@
 
 /////////// Task-4 //////////
 
-let visitor = prompt("Hello, Please enter your name :");
-let gender = prompt("Can you tell us your gender?");
-let lowerGender = gender.toLowerCase();
-function gen() {
-  while (lowerGender != "male" && lowerGender != "female") {
-    gender = prompt("Please, select a gender");
-    lowerGender = gender.toLowerCase();
-  }
+// let visitor = prompt("Hello, Please enter your name :");
+// let gender = prompt("Can you tell us your gender?");
+// let lowerGender = gender.toLowerCase();
+// function gen() {
+//   while (lowerGender != "male" && lowerGender != "female") {
+//     gender = prompt("Please, select a gender");
+//     lowerGender = gender.toLowerCase();
+//   }
 
-  if (lowerGender === "male") {
-    alert("Welcome" + " Mr." + visitor);
-  } else if (lowerGender === "female") {
-    alert("Welcome Ms." + visitor);
-  }
-}
-let gn = gen();
+//   if (lowerGender === "male") {
+//     alert("Welcome" + " Mr." + visitor);
+//   } else if (lowerGender === "female") {
+//     alert("Welcome Ms." + visitor);
+//   }
+// }
+// let gn = gen();
 
-let drink = prompt("Do you prefer a hot or cold drink " + visitor + "?");
-let nameDrink = prompt("Please, write the name of your drink " + visitor + "?");
-let gettingPrepared = alert("Your drink is getting prepared " + visitor);
-let info = [visitor, gender, drink, nameDrink];
-for (let i = 0; i < info.length; i++) {
-  console.log(info[i]);
-}
+// let drink = prompt("Do you prefer a hot or cold drink " + visitor + "?");
+// let nameDrink = prompt("Please, write the name of your drink " + visitor + "?");
+// let gettingPrepared = alert("Your drink is getting prepared " + visitor);
+// let info = [visitor, gender, drink, nameDrink];
+// for (let i = 0; i < info.length; i++) {
+//   console.log(info[i]);
+// }
+// let visitorInfo = document.getElementById("Visitor_Info");
+// let div = document.createElement("div");
+// let p = document.createElement("p");
+// let ul = document.createElement("ul");
+// let li1 = document.createElement("li");
+// let li2 = document.createElement("li");
+// let li3 = document.createElement("li");
+
+// p.textContent = `${"Name :"} ${visitor}`;
+// li1.textContent = `${"Gender :"} ${gender}`;
+// li2.textContent = `${"Drink:"} ${drink}`;
+// li3.textContent = `${"Drink type:"} ${nameDrink}`;
+
+// ul.appendChild(li1);
+// ul.appendChild(li2);
+// ul.appendChild(li3);
+
+// div.appendChild(p);
+// div.appendChild(ul);
+
+// visitorInfo.appendChild(div);
+
+/////////// Task-4 //////////
+
 let visitorInfo = document.getElementById("Visitor_Info");
-let div = document.createElement("div");
-let p = document.createElement("p");
-let ul = document.createElement("ul");
-let li1 = document.createElement("li");
-let li2 = document.createElement("li");
-let li3 = document.createElement("li");
+let user_Info = document.getElementById("User_Info");
 
-p.textContent = `${"Name :"} ${visitor}`;
-li1.textContent = `${"Gender :"} ${gender}`;
-li2.textContent = `${"Drink:"} ${drink}`;
-li3.textContent = `${"Drink type:"} ${nameDrink}`;
+visitorInfo.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let username = event.target.Name.value;
+  let age = event.target.Age.value;
+  let hot = event.target.Hot.checked;
+  let cold = event.target.Cold.checked;
+  let drink = event.target.Drink.value;
+  info.reset();
 
-ul.appendChild(li1);
-ul.appendChild(li2);
-ul.appendChild(li3);
+  if (hot == true) {
+    if (cold == true) {
+      hot = "Hot  Cold";
+    } else {
+      hot = "hot";
+    }
+  } else {
+    hot = "cold";
+  }
 
-div.appendChild(p);
-div.appendChild(ul);
+  render(username, age, hot, drink);
+});
 
-visitorInfo.appendChild(div);
+function render(username, age, hot, drink) {
+  let pusername = document.createElement("p");
+  let page = document.createElement("p");
+  let pTdrink = document.createElement("p");
+  let pdrink = document.createElement("p");
+
+  pusername.textContent = `Name : ${username}`;
+  page.textContent = `Age : ${age}`;
+  pTdrink.textContent = `T-Drink : ${hot}`;
+  pdrink.textContent = `N-Drink : ${drink}`;
+
+  user_Info.appendChild(pusername);
+  user_Info.appendChild(page);
+  user_Info.appendChild(pTdrink);
+  user_Info.appendChild(pdrink);
+}
