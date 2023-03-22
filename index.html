@@ -82,8 +82,24 @@
           <button type="button" class="btn fw-normal">Shop-Now</button>
         </div>
       </div>
-      <div class="container" style="z-index: 5;" id="Visitor_Info">
+      <!-- ////////////////////////////// -->
+      <!-- <div class="container" style="z-index: 5;" id="Visitor_Info">
+      </div> -->
+      <!-- /////////////////////////////// -->
+      <div class="container d-flex align-content-end" style="z-index: 5;" id="Visitor_Info">
+        <form id="info">
+          <input type="text" id="Name" name="Name" required placeholder="UserName" /><br />
+          <input type="text" id="Age" name="Age" required placeholder="Age" /><br />
+          <input type="checkbox" id="Hot" name="Hot" value="Hot"><label for="Hot">Hot</label>
+          <input type="checkbox" id="Cold" name="Cold" value="Cold"><label for="Cold">Cold</label><br>
+          <input type="text" id="Drink" name="Drink" required placeholder="Drink-Type" /><br />
+          <input type="submit" value="submit data" id="Submit"/>
+        </form>
+        <div class="container" id="User_Info">
+          <h4>Orders</h4>
+        </div> 
       </div>
+
     <!-- End-landing -->
     <!--////////////////////////////////-->
     <!-- Start-About-me-->

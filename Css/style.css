@@ -7,12 +7,12 @@
 /* ////////////////////////// */
 /* Start Components */
 .btn-group .btn {
-  color: #F8E4BE;
-  border-color: #E0A872;
+  color: #f8e4be;
+  border-color: #e0a872;
 }
 
 .btn-group .btn:hover {
-  color: #F8E4BE;
+  color: #f8e4be;
   background-color: transparent;
   backdrop-filter: blur(5px);
   font-size: 23px;
@@ -27,7 +27,7 @@
   width: 100%;
   height: 115vh;
   /* z-index: -10; */
-  top:0 ;
+  top: 0;
   left: 0;
 }
 .navbar {
@@ -40,7 +40,7 @@
 }
 
 .navbar .container-fluid a {
-  color:#FFF8E8;
+  color: #fff8e8;
 }
 
 .navbar .container-fluid a:hover {
@@ -73,19 +73,17 @@
   /* top: 32%; */
 }
 
-
 .landing #My-name {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   color: var(--main-head-text-color);
   font-weight: bold;
   font-size: 100px;
-  color: #54372B;
+  color: #54372b;
 }
 
 .landing p {
-  color: #DABB9E;
+  color: #dabb9e;
 }
-
 
 .landing .side-social .mail-icon {
   color: var(--main-text-color);
@@ -96,15 +94,13 @@
 /* End landing */
 /* ////////////////////////// */
 /* Start-Components */
-.Components h2{
+.Components h2 {
   color: var(--main-head-text-color);
 }
 
-
-
 /* End-Components */
 /* js */
-#Visitor_Info{
+/* #Visitor_Info{
   position: absolute;
   top: 80%;
   left: 2%;
@@ -112,5 +108,46 @@
 }
 #Visitor_Info li {
   color: #54372B;
+} */
+
+#Visitor_Info {
+  position: absolute;
+  top: 80%;
+  left: 2%;
 }
+
+#Visitor_Info input {
+  margin-bottom: 0.5rem;
+  background-color: #54372b8c;
+  border: #54372b8c;
+  border-radius: 10px;
+  text-align: center;
+  color: #dabb9e;
+}
+
+#Visitor_Info input:last-child{
+  width: 60%;
+  margin-left: 20%;
+}
+
+#Visitor_Info label {
+  color: #dabb9e;
+}
+::placeholder {
+  color: #dabb9e8b;
+}
+
+#User_Info {
+  border-radius: 20px;
+  text-align: center;
+  z-index: 5;
+  width: 30%;
+  height: 10rem;
+  background-color: #54372b8c;
+  backdrop-filter: blur(3px);
+  margin-left: 5%;
+  overflow-y:auto;
+  color: #dabb9e;
+}
+
 /* js */
